@@ -8,14 +8,14 @@ body {
   padding: 20px;
 }
 .audio-title {
-  color: white; /* Color for the heading */
-  font-size: 24px; /* Heading font size */
-  margin-bottom: 10px; /* Space between the title and the audio player */
+  color: white;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
 audio {
-  display: block; /* Ensures audio player is on a new line */
-  margin: 20px auto; /* Centers the audio player horizontally */
+  display: block;
+  margin: 20px auto;
 }
 /*
 
