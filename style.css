@@ -1,0 +1,31 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1c1c1c; /* Background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.raindrop {
+  position: absolute;
+  width: 1px;
+  height: 40px;
+  background-color: rgba(118, 118, 248, 0.7); /* Raindrop Color */
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(
+      -500px
+    ); /* This makes raindrops start above the screen idk why -500 ill change that later */
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
