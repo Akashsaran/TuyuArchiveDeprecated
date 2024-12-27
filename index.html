@@ -1,17 +1,36 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Protein Visualizer</title>
+    <!-- Include NGL Viewer and Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://unpkg.com/ngl"></script>
+    <style>
+      /* Make sure the viewport takes up the full screen */
+      #viewport {
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+      }
+    </style>
   </head>
   <body>
-    <h1>Hey!</h1>
-    <p>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, minus
-      similique. Fugit blanditiis quidem qui. Dicta, velit asperiores. Tenetur,
-      minima a. Error nesciunt nemo mollitia minus enim placeat. Blanditiis,
-      harum.
-    </p>
-    <p>I just want to see if this shows up!</p>
+    <!-- This div will contain the 3D view of the protein -->
+    <div id="viewport"></div>
+
+    <script>
+      // Initialize the NGL viewer in the #viewport element
+      var stage = new NGL.Stage("viewport");
+
+      // Load a PDB file (this example uses the protein 1A2K)
+      stage
+        .loadFile("https://files.rcsb.org/download/1A2K.pdb")
+        .then(function (structure) {
+          // Automatically adjust the view to fit the protein structure
+          structure.autoView();
+        });
+    </script>
   </body>
 </html>
