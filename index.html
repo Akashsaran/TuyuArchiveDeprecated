@@ -5,66 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tuyu Archive</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600&display=swap" rel="stylesheet">
+</head>
   </head>
-    <p>Yes bruh ik this looks like trash give me like a week to lock in</p>
-    <p>rain effects were there except i broke them whoopssss</p>
-    
-    <h2 class="audio-title">It's Raining After All</h2>
-    <audio controls autoplay>
-        <source src="songs\It's Raining After All.mp3" type="audio/mp3">
-    </audio>
 
-    <h2 class="audio-title">Early Summer</h2>
-    <audio controls autoplay>
-        <source src="songs\Early summer.mp3" type="audio/mp3">
-    </audio>
+  <body>
+    <video class="video-background" id="background-video" muted loop>
+      <source src="placeholder.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+    <div class="video-overlay"></div>
 
-    <h2 class="audio-title">Under the Summer Breeze</h2>
-    <audio controls autoplay>
-        <source src="songs\Under the Summer Breeze.mp3" type="audio/mp3">
-    </audio>
-
-    <h2 class="audio-title">When the Morning Glory Falls</h2>
-    <audio controls autoplay>
-        <source src="songs\When the Morning Glory Falls.mp3" type="audio/mp3">
-    </audio>
-
-    <h2 class="audio-title">Loneliness and the Future</h2>
-    <audio controls autoplay>
-        <source src="songs\Loneliness and the Future.mp3" type="audio/mp3">
-    </audio>
-
-    <h2 class="audio-title">I'm Getting on the Bus to the Other World, See Ya!</h2>
-    <audio controls autoplay>
-        <source src="songs\I'm getting on the bus to the other world, see ya!.mp3" type="audio/mp3">
-    </audio>
-
-    <h2 class="audio-title">Perhaps I'll be Able to Become the Sun</h2>
-    <audio controls autoplay>
-        <source src="songs\Perhaps I'll be able to become the Sun..mp3" type="audio/mp3">
-    </audio>
-
-    <h2 class="audio-title">Envy</h2>
-    <audio controls autoplay>
-        <source src="songs\Envy.mp3" type="audio/mp3">
-    </audio>
-
-    <h2 class="audio-title">Compared Child</h2>
-    <audio controls autoplay>
-        <source src="songs\Compared Child.mp3" type="audio/mp3">
-    </audio>
-
-    <h2 class="audio-title">Goodbye to Rock You</h2>
-    <audio controls autoplay>
-        <source src="songs\Goodbye to Rock you.mp3" type="audio/mp3">
-    </audio>
-
-    <h2 class="audio-title">Even Tears Withered</h2>
-    <audio controls autoplay>
-        <source src="songs\Even tears withered.mp3" type="audio/mp3">
-    </audio>
-
-    
+    <div class="player-container" id="player">
+      <div class="song-title" id="song-title">Song Name</div>
+      <img
+        src="placeholder.jpg"
+        alt="Album Cover"
+        class="album-cover"
+        id="album-cover"
+      />
+      <div class="timeline-container" id="timeline">
+        <div class="timeline-progress" id="timeline-progress"></div>
+      </div>
+      <div class="controls">
+        <button id="prev"><i class="fas fa-backward"></i></button>
+        <button id="play"><i class="fas fa-play"></i></button>
+        <button id="next"><i class="fas fa-forward"></i></button>
+    </div>
+      <audio id="audio"></audio>
+    </div>
 
     <script src="script.js"></script>
   </body>
